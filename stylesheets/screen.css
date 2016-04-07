@@ -66,3 +66,72 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+/* line 10, ../sass/screen.scss */
+body {
+  background-color: black;
+}
+
+/* line 3, ../sass/components/_svg.scss */
+svg {
+  max-width: 80%;
+  max-height: 80%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  -webkit-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+/* line 13, ../sass/components/_svg.scss */
+svg path, svg polygon, svg rect {
+  fill-opacity: 0;
+  fill: #fff !important;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 3319;
+  stroke-dashoffset: 3319;
+  animation-name: draw;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes draw {
+  95% {
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-width: 0;
+    fill-opacity: 1;
+  }
+}
+/* line 3, ../sass/components/_header.scss */
+.header {
+  height: 100px;
+  border: 5px solid #ffffff;
+  position: relative;
+}
+
+/* line 9, ../sass/components/_header.scss */
+.shrink {
+  height: 75px;
+  width: 75px;
+  position: absolute;
+}
+
+/* line 16, ../sass/components/_header.scss */
+.top {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: auto;
+  right: auto;
+}
